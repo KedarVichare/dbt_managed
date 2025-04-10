@@ -1,4 +1,4 @@
-{{ config(materialized='ephemeral') }}
+
 
 with session_time as (
     select
