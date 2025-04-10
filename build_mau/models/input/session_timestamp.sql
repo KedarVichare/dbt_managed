@@ -1,5 +1,3 @@
-
-
 with session_time as (
     select
         session_id,
