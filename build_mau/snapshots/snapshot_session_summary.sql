@@ -1,15 +1,15 @@
 {% snapshot snapshot_session_summary %}
 
 {{
-  config(
-    target_schema='snapshot',
-    unique_key='sessionId',
-    strategy='timestamp',
-    updated_at='ts',
-    invalidate_hard_deletes=True
-  )
+    config(
+        target_schema='snapshot',
+        unique_key='session_id',      
+        strategy='timestamp',
+        updated_at='end_time',      
+        invalidate_hard_deletes=True
+    )
 }}
 
-SELECT * FROM {{ ref('session_summary') }}
+select * from {{ ref('session_summary') }}
 
 {% endsnapshot %}
