@@ -1,5 +1,3 @@
-{{ config(materialized='table') }}
-
 with session_duration as (
 select
 s.session_id,
