@@ -1,5 +1,3 @@
-{{ config(materialized='ephemeral') }}
-
 with user_channel_data as (
     select
         user_id,
